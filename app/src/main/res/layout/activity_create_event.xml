@@ -52,6 +52,7 @@
             android:id="@+id/event_date_time_et"
             android:layout_width="match_parent"
             android:layout_height="@dimen/edit_text_height"
+
             android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:background="@drawable/backwithborder"
             android:hint="@string/enter_datetime"
