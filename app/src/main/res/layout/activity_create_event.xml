@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_event"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+    tools:context="com.simpalm.meetingtracker.CreateEvent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_toolbar"
+        android:background="@android:color/black"
+        app:titleTextColor="@android:color/white"></android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/event_title_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_height"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:background="@drawable/backwithborder"
+            android:hint="@string/event_title"
+            android:inputType="textCapWords"
+
+            android:padding="@dimen/edit_text_padding" />
+
+        <EditText
+            android:id="@+id/event_description_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/description_height"
+            android:background="@drawable/backwithborder"
+            android:gravity="start"
+            android:hint="@string/event_description"
+            android:inputType="textMultiLine"
+            android:maxLength="200"
+            android:padding="@dimen/edit_text_padding"
+            android:textSize="@dimen/description_size" />
+
+        <EditText
+            android:id="@+id/event_date_time_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_height"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:background="@drawable/backwithborder"
+            android:hint="@string/enter_datetime"
+            android:inputType="datetime"
+            android:padding="@dimen/edit_text_padding" />
+
+        <EditText
+            android:id="@+id/event_location_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_height"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:background="@drawable/backwithborder"
+            android:hint="@string/event_location"
+            android:inputType="text"
+            android:padding="@dimen/edit_text_padding" />
+
+        <Button
+            android:id="@+id/add_event_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:text="@string/create_event" />
+
+
+    </LinearLayout>
+</LinearLayout>

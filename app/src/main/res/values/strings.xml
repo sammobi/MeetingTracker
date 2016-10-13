@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MeetingTracker</string>
+    <string name="enterpin">Enter 4 digit Pin</string>
+    <string name="submit">Submit</string>
+    <string name="intro_text">Please enter your pin to secure your account!</string>
+    <string name="skip">Skip for Now</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="confirm_pin">Please confirm your pin!</string>
+    <string name="confirm_input">Confirm Pin </string>
+    <string name="create_event">Create Event</string>
+    <string name="past_event">Past Events</string>
+    <string name="reminder_settings">Reminder Settings</string>
+    <string name="pin_settings">Pin Setting</string>
+    <string name="event_title">Enter Event Title</string>
+    <string name="event_description">Enter event description</string>
+    <string name="enter_datetime">Select Event Date and Time</string>
+    <string name="event_location">Select Event Location</string>
+    <string name="OK">OK</string>
+
+</resources>
