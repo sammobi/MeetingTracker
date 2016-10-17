@@ -19,9 +19,11 @@
         <activity android:name=".ConfirmPinActivity" />
         <activity
             android:name=".CreateEvent"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ReminderSettings" />
+        <activity android:name=".PinSettings" />
+        <activity android:name=".ChangePin" />
+        <activity android:name=".SetupPin"></activity>
     </application>
 
 </manifest>

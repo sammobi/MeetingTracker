@@ -15,6 +15,7 @@ import android.widget.TimePicker;
 
 import com.kunzisoft.switchdatetime.SwitchDateTimeDialogFragment;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CreateEvent extends AppCompatActivity {
@@ -22,6 +23,7 @@ public class CreateEvent extends AppCompatActivity {
     private Toolbar mToolbar;
     private EditText mEventTitleEt, mEventDescriptionEt, mEventDateTimeEt, mEventLocationEt;
     private Button mCreateEventBtn;
+
     private static final String TAG_DATETIME_FRAGMENT = "TAG_DATETIME_FRAGMENT";
 
     private static final String STATE_TEXTVIEW = "STATE_TEXTVIEW";
@@ -39,7 +41,7 @@ public class CreateEvent extends AppCompatActivity {
             mEventDateTimeEt.setText(savedInstanceState.getCharSequence(STATE_TEXTVIEW));
         }
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar_create_event);
         mToolbar.setTitle("Signup");
         mToolbar.setNavigationIcon(R.drawable.back);
 
@@ -55,16 +57,8 @@ public class CreateEvent extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CreateEvent.this, MainActivity.class);
-
                 startActivity(intent);
                 finish();
-
-            }
-        });
-
-        mCreateEventBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
             }
         });
@@ -86,7 +80,9 @@ public class CreateEvent extends AppCompatActivity {
         dateTimeFragment.setOnButtonClickListener(new SwitchDateTimeDialogFragment.OnButtonClickListener() {
             @Override
             public void onPositiveButtonClick(Date date) {
-                mEventDateTimeEt.setText(date.toString());
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm a");
+
+                mEventDateTimeEt.setText(simpleDateFormat.format(date));
             }
 
             @Override
@@ -118,6 +114,7 @@ public class CreateEvent extends AppCompatActivity {
 
         super.onSaveInstanceState(savedInstanceState);
     }
+
 
 }
 

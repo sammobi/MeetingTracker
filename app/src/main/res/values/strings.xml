@@ -18,5 +18,22 @@
     <string name="enter_datetime">Select Event Date and Time</string>
     <string name="event_location">Select Event Location</string>
     <string name="OK">OK</string>
+    <string name="usecurrentlocation">Use Current Location</string>
+    <string name="entercurrentlocation">Enter Location</string>
+    <string name="upcoming_event">Upcoming Event</string>
+    <string name="alert_me">Alert me:</string>
+    <string name="two_week">Two Week Before the Meeting</string>
+    <string name="one_week">One week before the meeting</string>
+    <string name="three_days">Three days before the meeting</string>
+    <string name="one_day">One Day before Meeting</string>
+    <string name="twelve_hour">Twelve hour before the meeting</string>
+    <string name="about_start">About to start</string>
+    <string name="save_reminder">Set Reminder</string>
+    <string name="change_pin">Change Pin</string>
+    <string name="remove_pin">Remove Pin</string>
+    <string name="setup_pin">Setup Pin</string>
+    <string name="enteroldpin">Enter Old Pin</string>
+    <string name="newPin">Enter New Pin</string>
+    <string name="confirm_pin_changePin">Confirm Pin</string>
 
 </resources>

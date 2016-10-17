@@ -18,6 +18,12 @@
         android:text="@string/create_event" />
 
     <Button
+        android:id="@+id/upcoming_event_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/upcoming_event" />
+
+    <Button
         android:id="@+id/past_event_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

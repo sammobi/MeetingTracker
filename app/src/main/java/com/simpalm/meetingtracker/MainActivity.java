@@ -24,8 +24,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mPinSettingBtn = (Button) findViewById(R.id.pin_setting_btn);
 
         mCreateEventBtn.setOnClickListener(this);
+        mReminderSettingBtn.setOnClickListener(this);
     }
-
 
 
     @Override
@@ -33,13 +33,19 @@ public class MainActivity extends Activity implements View.OnClickListener {
         if (v.getId() == R.id.create_event_btn) {
             Intent intent = new Intent(MainActivity.this, CreateEvent.class);
             startActivity(intent);
-        } else if (v.getId() == R.id.past_event_btn) {
+        } else if (v.getId() == R.id.reminder_setting_btn) {
+            Intent intent = new Intent(MainActivity.this, ReminderSettings.class);
+            startActivity(intent);
+
+
+        } else if (v.getId() == R.id.pin_setting_btn) {
+            Intent intent = new Intent(MainActivity.this, PinSettings.class);
+            startActivity(intent);
 
 
         } else if (v.getId() == R.id.past_event_btn) {
-
-
-        } else if (v.getId() == R.id.past_event_btn) {
+            Intent intent = new Intent(MainActivity.this, ReminderSettings.class);
+            startActivity(intent);
 
         }
 

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_reminder_settings"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.simpalm.meetingtracker.ReminderSettings">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/toolbar_reminder_settings"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_toolbar"
+            android:background="@android:color/black">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/reminder_settings"
+                android:textColor="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/reminder_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/back" />
+
+            <ImageButton
+                android:id="@+id/reminder_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/done_icon" />
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:text="@string/alert_me"
+            android:textSize="@dimen/title"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/two_week_chk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:clickable="true"
+            android:text="@string/two_week"
+            android:textSize="@dimen/checkbox_size" />
+
+        <CheckBox
+            android:id="@+id/one_week_chk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:clickable="true"
+            android:text="@string/one_week"
+            android:textSize="@dimen/checkbox_size" />
+
+        <CheckBox
+            android:id="@+id/three_day_chk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:clickable="true"
+            android:text="@string/three_days"
+            android:textSize="@dimen/checkbox_size" />
+
+        <CheckBox
+            android:id="@+id/one_day_chk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:clickable="true"
+            android:text="@string/one_day"
+            android:textSize="@dimen/checkbox_size" />
+
+        <CheckBox
+            android:id="@+id/twelve_hour_chk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:clickable="true"
+            android:text="@string/twelve_hour"
+            android:textSize="@dimen/checkbox_size" />
+
+        <CheckBox
+            android:id="@+id/about_to_chk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:clickable="true"
+            android:text="@string/about_start"
+            android:textSize="@dimen/checkbox_size" />
+    </LinearLayout>
+
+</ScrollView>

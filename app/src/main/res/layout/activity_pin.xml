@@ -21,7 +21,6 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/edit_text_height"
         android:background="@android:color/darker_gray"
-
         android:gravity="center"
         android:hint="@string/enterpin"
         android:inputType="number"
@@ -32,7 +31,6 @@
         android:id="@+id/enter_pin_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_margin="@dimen/activity_vertical_margin"
         android:background="@android:color/holo_blue_dark"
         android:gravity="center"
