@@ -1,5 +1,6 @@
 package com.simpalm.meetingtracker;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -30,6 +31,15 @@ public class PinSettings extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
+        if (v.getId() == R.id.button_changepin) {
+            Intent intent = new Intent(PinSettings.this, ChangePin.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.button_remove_pin) {
+        } else if (v.getId() == R.id.button_setup_pin) {
+            Intent intent = new Intent(PinSettings.this, SetupPin.class);
+            startActivity(intent);
+        }
+
 
     }
 }

@@ -23,7 +23,8 @@
         <activity android:name=".ReminderSettings" />
         <activity android:name=".PinSettings" />
         <activity android:name=".ChangePin" />
-        <activity android:name=".SetupPin"></activity>
+        <activity android:name=".SetupPin" />
+        <activity android:name=".LoginPin"></activity>
     </application>
 
 </manifest>

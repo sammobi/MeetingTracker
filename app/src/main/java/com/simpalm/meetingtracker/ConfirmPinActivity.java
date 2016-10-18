@@ -2,6 +2,7 @@ package com.simpalm.meetingtracker;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,17 +28,14 @@ public class ConfirmPinActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String pin = getIntent().getStringExtra("Pin");
-
                 String confirmPin = mEnterPinEt.getText().toString();
 
                 if (confirmPin.equals(pin)) {
                     Toast.makeText(ConfirmPinActivity.this, "Pin matches", Toast.LENGTH_SHORT).show();
 
-                    mSharedPreferences = getApplicationContext().getSharedPreferences("Logged User Pin", MODE_PRIVATE);
-                    SharedPreferences.Editor editor = mSharedPreferences.edit();
-                    editor.putString("user_pin", confirmPin); // Storing string
+                    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ConfirmPinActivity.this);
+                    prefs.edit().putString("key", confirmPin).commit();
 
-                    editor.commit(); // commit
 
                     Intent intent = new Intent(ConfirmPinActivity.this, MainActivity.class);
                     startActivity(intent);
