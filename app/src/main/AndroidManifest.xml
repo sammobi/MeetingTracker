@@ -10,11 +10,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
         <activity android:name=".PinActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ConfirmPinActivity" />
         <activity
@@ -24,7 +20,14 @@
         <activity android:name=".PinSettings" />
         <activity android:name=".ChangePin" />
         <activity android:name=".SetupPin" />
-        <activity android:name=".LoginPin"></activity>
+        <activity android:name=".LoginPin" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -7,16 +7,31 @@
     android:orientation="vertical"
     tools:context="com.simpalm.meetingtracker.ChangePin">
 
-    <ImageButton
-        android:id="@+id/imgbtn_setupPin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="15dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/back" />
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar_reminder_settings"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_toolbar"
+        android:background="@android:color/black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/setup_pin"
+            android:textColor="@android:color/white" />
+
+        <ImageButton
+            android:id="@+id/setupPin_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back" />
+    </android.support.v7.widget.Toolbar>
 
     <EditText
-        android:id="@+id/edittext_enterPin"
+        android:id="@+id/edittext_SetupPin"
         android:layout_width="match_parent"
         android:layout_height="@dimen/edit_text_height"
         android:layout_margin="@dimen/activity_vertical_margin"
@@ -45,6 +60,4 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/activity_vertical_margin"
         android:text="@string/setup_pin" />
-
-
 </LinearLayout>

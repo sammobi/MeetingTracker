@@ -48,23 +48,31 @@ public class ChangePin extends AppCompatActivity {
                                              public void onClick(View v) {
 
 
-// call the sharedprefernce and get the username from sharepference and save it inside the username variable.
+// call the sharedprefernce and get the pin from sharepference and save it inside the pin variable.
                                                  SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ChangePin.this);
-                                                 String pin = prefs.getString("key", null);
+                                                 String pin = prefs.getString("key", "");
 
 
                                                  String oldPin = mOldPinEt.getText().toString();
                                                  String newPin = mNewPinEt.getText().toString();
                                                  String confirmPin = mConfirmPinEt.getText().toString();
 
-                                                 if (pin == null) {
+                                                 if (pin.equals(null)) {
+
+                                                     Intent intent = new Intent(ChangePin.this, SetupPin.class);
+                                                     startActivity(intent);
                                                      Toast.makeText(ChangePin.this, "You do not have a pin setup. Please setup pin", Toast.LENGTH_SHORT).show();
                                                  } else if (!oldPin.equals(pin)) {
                                                      Toast.makeText(ChangePin.this, "Your old pin is incorrect", Toast.LENGTH_SHORT).show();
                                                  } else if (!newPin.equals(confirmPin)) {
                                                      Toast.makeText(ChangePin.this, "New pin and confirm pin does not match", Toast.LENGTH_SHORT).show();
                                                  } else {
+                                                     mOldPinEt.setText("");
+                                                     mNewPinEt.setText("");
+                                                     mConfirmPinEt.setText("");
                                                      Toast.makeText(ChangePin.this, "Your pin has been reset", Toast.LENGTH_SHORT).show();
+                                                     SharedPreferences prefs1 = PreferenceManager.getDefaultSharedPreferences(ChangePin.this);
+                                                     prefs.edit().putString("key", confirmPin).commit();
                                                  }
                                              }
                                          }
