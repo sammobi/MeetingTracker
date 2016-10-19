@@ -9,9 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".PinActivity">
-
-        </activity>
+        <activity android:name=".PinActivity" />
         <activity android:name=".ConfirmPinActivity" />
         <activity
             android:name=".CreateEvent"
@@ -28,6 +26,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PastEvents" />
+        <activity android:name=".UpcomingEvents"></activity>
     </application>
 
 </manifest>
