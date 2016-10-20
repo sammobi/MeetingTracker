@@ -64,10 +64,10 @@
 
             <ImageView
                 android:id="@+id/delete_user_btn"
-                android:layout_width="wrap_content"
-
-                android:layout_height="wrap_content"
-                android:background="@android:drawable/ala" />
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/alarmHeight"
+                android:background="@android:drawable/ic_lock_idle_alarm"
+                android:scaleType="centerCrop" />
 
 
         </LinearLayout>
