@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".PastEvents" />
-        <activity android:name=".UpcomingEvents"></activity>
+        <activity android:name=".UpcomingEvent"></activity>
     </application>
 
 </manifest>
