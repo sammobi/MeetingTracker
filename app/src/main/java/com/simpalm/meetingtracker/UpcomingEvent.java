@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 public class UpcomingEvent extends AppCompatActivity {
 
     private ImageButton mBackbtn, mGridBtn, mRecBtn;
-    private FrameLayout mFrameLayout;
+
 
 
     @Override

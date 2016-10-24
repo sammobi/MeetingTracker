@@ -16,28 +16,27 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class UpcomingEventGridFragment extends Fragment {
+public class PastEventGridFragment extends Fragment {
     private RecyclerView mRecyclerView;
 
     ArrayList<EventDetail> mArraylist;
 
-    private UpcomingRecyclerAdapter mUpcomingRecyclerAdapter;
+    private PastRecyclerAdapter mPastEventRecyclerAdapter;
 
 
-    public UpcomingEventGridFragment() {
+    public PastEventGridFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
 
-        UpcomingFragment upcomingFragment = new UpcomingFragment();
+        PastFragment pastFragment = new PastFragment();
 
 
-        ArrayList<EventDetail> mArraylist = upcomingFragment.getNumberList();
+        ArrayList<EventDetail> mArraylist = pastFragment.getNumberList();
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.recyclerview, container, false);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
@@ -48,9 +47,9 @@ public class UpcomingEventGridFragment extends Fragment {
                 new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
 // Attach the layout manager to the recycler view
         mRecyclerView.setLayoutManager(gridLayoutManager);
-        mUpcomingRecyclerAdapter = new UpcomingRecyclerAdapter(getActivity(), mArraylist);
-        mRecyclerView.setAdapter(mUpcomingRecyclerAdapter);
-        mUpcomingRecyclerAdapter.setHideDetail(true);
+        mPastEventRecyclerAdapter = new PastRecyclerAdapter(getActivity(), mArraylist);
+        mRecyclerView.setAdapter(mPastEventRecyclerAdapter);
+        mPastEventRecyclerAdapter.setHideDetail(true);
         return view;
     }
 

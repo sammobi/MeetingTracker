@@ -15,16 +15,16 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class UpcomingFragment extends Fragment {
+public class PastFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
 
-    private ArrayList<EventDetail> mEventDetailArrayList, mEventGridArrayList;
+    private ArrayList<EventDetail> mEventDetailArrayList;
 
-    private UpcomingRecyclerAdapter mUpcomingRecyclerAdapter;
+    private PastRecyclerAdapter mPastRecyclerAdapter;
 
 
-    public UpcomingFragment() {
+    public PastFragment() {
         // Required empty public constructor
     }
 
@@ -45,8 +45,8 @@ public class UpcomingFragment extends Fragment {
 
         mRecyclerView.setLayoutManager(layoutManager);
 
-        mUpcomingRecyclerAdapter = new UpcomingRecyclerAdapter(getActivity(), arrayList);
-        mRecyclerView.setAdapter(mUpcomingRecyclerAdapter);
+        mPastRecyclerAdapter = new PastRecyclerAdapter(getActivity(), arrayList);
+        mRecyclerView.setAdapter(mPastRecyclerAdapter);
 
         return view;
 

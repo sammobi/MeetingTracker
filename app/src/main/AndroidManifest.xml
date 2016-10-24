@@ -26,8 +26,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PastEvents" />
-        <activity android:name=".UpcomingEvent"></activity>
+        <activity android:name=".UpcomingEvent" />
+        <activity android:name=".PastEvents"></activity>
     </application>
 
 </manifest>

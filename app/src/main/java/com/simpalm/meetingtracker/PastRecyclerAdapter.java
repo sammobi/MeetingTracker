@@ -13,21 +13,30 @@ import java.util.ArrayList;
 /**
  * Created by Simpalm on 7/21/16.
  */
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.EventViewHolder> {
+public class PastRecyclerAdapter extends RecyclerView.Adapter<PastRecyclerAdapter.EventViewHolder> {
 
     Context mContext;
 
     private ArrayList<EventDetail> mEventDetail;
 
-    public RecyclerAdapter(Context mContext, ArrayList<EventDetail> mContactList) {
+    public PastRecyclerAdapter(Context mContext, ArrayList<EventDetail> mContactList) {
         this.mContext = mContext;
         this.mEventDetail = mContactList;
+    }
+
+    private boolean mHideDetail = false;
+
+    public void setHideDetail(boolean hide) {
+        mHideDetail = hide;
+
+        notifyDataSetChanged();
+
     }
 
     @Override
     public EventViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.upcoming_events_recycler_fragment, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_past_events, parent, false);
 
         return new EventViewHolder(itemView);
     }
@@ -37,6 +46,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.EventV
 
         final EventDetail eventDetail = mEventDetail.get(position);
         holder.mEventTitle.setText(eventDetail.getEventTitle());
+
+        // in line if condition, if mhidetetail is true then view will be hidden if not then view will be visible.
+        holder.mEventDesc.setVisibility(mHideDetail ? View.GONE : View.VISIBLE);
         holder.mEventDesc.setText(eventDetail.getEventDesc());
         holder.mEventDateTime.setText(eventDetail.getEventDateTime());
         holder.mEventLocation.setText(eventDetail.getEventLocation());
@@ -67,11 +79,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.EventV
 
             super(itemView);
 
-            mEventTitle = (TextView) itemView.findViewById(R.id.eventTitleTv_rv);
-            mEventDesc = (TextView) itemView.findViewById(R.id.eventDescTv_rv);
-            mEventDateTime = (TextView) itemView.findViewById(R.id.eventDateTimeTv_rv);
-            mEventLocation = (TextView) itemView.findViewById(R.id.eventLocationTv_rv);
-            imageButton = (ImageButton) itemView.findViewById(R.id.set_reminder_btn);
+            mEventTitle = (TextView) itemView.findViewById(R.id.pastEventTitle_TextView);
+            mEventDesc = (TextView) itemView.findViewById(R.id.pastEventDesc_TextView);
+            mEventDateTime = (TextView) itemView.findViewById(R.id.pastEventDateTime_textView);
+            mEventLocation = (TextView) itemView.findViewById(R.id.pastEventLocation_TextView);
+            imageButton = (ImageButton) itemView.findViewById(R.id.delte_event_btn);
 
         }
 

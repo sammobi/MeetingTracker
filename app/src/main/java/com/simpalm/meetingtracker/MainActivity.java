@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mReminderSettingBtn.setOnClickListener(this);
         mPinSettingBtn.setOnClickListener(this);
         mUpcomingEventBtn.setOnClickListener(this);
+        mPastEventsBtn.setOnClickListener(this);
     }
 
 
@@ -44,11 +45,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, PinSettings.class);
             startActivity(intent);
         } else if (v.getId() == R.id.upcoming_event_btn) {
-
             Intent intent = new Intent(MainActivity.this, UpcomingEvent.class);
             startActivity(intent);
-
-
+        } else if (v.getId() == R.id.past_event_btn) {
+            Intent intent = new Intent(MainActivity.this, PastEvents.class);
+            startActivity(intent);
         }
 
 
