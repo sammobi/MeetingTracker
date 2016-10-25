@@ -21,6 +21,7 @@
 
             <TextView
                 android:id="@+id/upcomingEventTitle_TextView"
+                style="@style/TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
@@ -28,6 +29,7 @@
 
             <TextView
                 android:id="@+id/upcomingEventDesc_textView"
+                style="@style/TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
@@ -35,6 +37,7 @@
 
             <TextView
                 android:id="@+id/upcomingEventDateTime_textView"
+                style="@style/TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
@@ -44,6 +47,7 @@
 
             <TextView
                 android:id="@+id/upcomingEventLocation_textView"
+                style="@style/TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/eventLocationTv" />
@@ -59,9 +63,9 @@
 
             <ImageButton
                 android:id="@+id/set_reminder_btn"
-                android:layout_marginRight="5dp"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:layout_marginRight="5dp"
                 android:background="@android:drawable/ic_lock_idle_alarm"
                 android:scaleType="centerCrop" />
 

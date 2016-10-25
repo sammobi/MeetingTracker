@@ -9,11 +9,11 @@
 
     <include
         android:id="@+id/toolbar_pin_settings"
-
         layout="@layout/toolbar" />
 
     <Button
         android:id="@+id/button_changepin"
+        style="@style/Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/activity_vertical_margin"
@@ -21,6 +21,7 @@
 
     <Button
         android:id="@+id/button_remove_pin"
+        style="@style/Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/activity_vertical_margin"
@@ -29,6 +30,7 @@
 
     <Button
         android:id="@+id/button_setup_pin"
+        style="@style/Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/activity_vertical_margin"

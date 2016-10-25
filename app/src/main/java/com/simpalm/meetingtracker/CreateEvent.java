@@ -42,7 +42,7 @@ public class CreateEvent extends AppCompatActivity {
         }
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar_create_event);
-        mToolbar.setTitle("Signup");
+        mToolbar.setTitle("Create Event");
         mToolbar.setNavigationIcon(R.drawable.back);
 
         mEventTitleEt = (EditText) findViewById(R.id.event_title_et);

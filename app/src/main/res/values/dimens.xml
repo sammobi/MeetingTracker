@@ -11,4 +11,5 @@
     <dimen name="checkbox_size">20sp</dimen>
     <dimen name="alarmHeight">40dp</dimen>
     <dimen name="spacing">5dp</dimen>
+    <dimen name="buttonSpacing">2dp</dimen>
 </resources>

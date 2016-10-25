@@ -13,30 +13,51 @@
 
     <Button
         android:id="@+id/create_event_btn"
+        style="@style/Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/create_event" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/buttonSpacing" />
+
     <Button
         android:id="@+id/upcoming_event_btn"
+        style="@style/Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/upcoming_event" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/buttonSpacing" />
+
     <Button
         android:id="@+id/past_event_btn"
+        style="@style/Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/past_event" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/buttonSpacing" />
+
     <Button
         android:id="@+id/reminder_setting_btn"
+        style="@style/Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/reminder_settings" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/buttonSpacing" />
+
     <Button
         android:id="@+id/pin_setting_btn"
+        style="@style/Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/pin_settings" />
