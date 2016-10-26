@@ -9,8 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_margin="10dp"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -24,7 +23,8 @@
                 style="@style/TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
                 tools:text="@string/event_title_tv" />
 
             <TextView
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:text="@string/eventDateTimeTv"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:textStyle="bold|italic" />
 
             <TextView
@@ -50,7 +50,9 @@
                 style="@style/TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/eventLocationTv" />
+                android:text="@string/eventLocationTv"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
 
         </LinearLayout>
 
@@ -65,7 +67,7 @@
                 android:id="@+id/delte_event_btn"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
                 android:background="@android:drawable/ic_delete"
                 android:scaleType="centerCrop" />
 

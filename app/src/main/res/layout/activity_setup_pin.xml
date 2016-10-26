@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/setup_pin"
+            android:textSize="@dimen/checkbox_size"
             android:textColor="@android:color/white" />
 
         <ImageButton

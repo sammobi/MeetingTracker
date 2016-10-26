@@ -45,20 +45,20 @@
             android:padding="@dimen/edit_text_padding"
             android:textSize="@dimen/description_size" />
 
-        <EditText
+        <TextView
             android:id="@+id/event_date_time_et"
             style="@style/EditText"
             android:layout_width="match_parent"
             android:layout_height="@dimen/edit_text_height"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:hint="@string/enter_datetime"
-            android:inputType="datetime"
             android:padding="@dimen/edit_text_padding" />
 
         <RadioGroup
             android:id="@+id/rdgroup"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
 
             <RadioButton
                 android:id="@+id/enter_location_rdbtn"
@@ -76,12 +76,13 @@
                 android:text="@string/usecurrentlocation" />
         </RadioGroup>
 
-        <EditText
+        <AutoCompleteTextView
+
             android:id="@+id/event_location_et"
             style="@style/EditText"
             android:layout_width="match_parent"
             android:layout_height="@dimen/edit_text_height"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:hint="@string/event_location"
             android:inputType="text"
             android:padding="@dimen/edit_text_padding" />

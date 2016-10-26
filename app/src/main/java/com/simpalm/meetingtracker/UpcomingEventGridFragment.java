@@ -43,6 +43,7 @@ public class UpcomingEventGridFragment extends Fragment {
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.spacing);
         mRecyclerView.addItemDecoration(new SpacesItemDecoration(spacingInPixels));
+
         // First param is number of columns and second param is orientation i.e Vertical or Horizontal
         StaggeredGridLayoutManager gridLayoutManager =
                 new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);

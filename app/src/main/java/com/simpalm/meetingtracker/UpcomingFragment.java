@@ -44,6 +44,7 @@ public class UpcomingFragment extends Fragment {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
 
         mRecyclerView.setLayoutManager(layoutManager);
+        mRecyclerView.addItemDecoration(new SimpleDividerItemDecoration(getActivity()));
 
         mUpcomingRecyclerAdapter = new UpcomingRecyclerAdapter(getActivity(), arrayList);
         mRecyclerView.setAdapter(mUpcomingRecyclerAdapter);

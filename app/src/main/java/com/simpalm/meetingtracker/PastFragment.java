@@ -44,7 +44,7 @@ public class PastFragment extends Fragment {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
 
         mRecyclerView.setLayoutManager(layoutManager);
-
+        mRecyclerView.addItemDecoration(new SimpleDividerItemDecoration(getActivity()));
         mPastRecyclerAdapter = new PastRecyclerAdapter(getActivity(), arrayList);
         mRecyclerView.setAdapter(mPastRecyclerAdapter);
 

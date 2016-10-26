@@ -18,8 +18,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/create_event"
-            android:textColor="@android:color/white" />
+            android:text="@string/upcoming_event"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/checkbox_size" />
 
         <ImageButton
             android:id="@+id/upcoming_backBtn"
@@ -54,8 +55,9 @@
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></FrameLayout>
+        android:layout_height="wrap_content">
 
+    </FrameLayout>
 
 
 </LinearLayout>

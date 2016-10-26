@@ -7,7 +7,23 @@ package com.simpalm.meetingtracker;
 public class EventDetail {
 
     String eventTitle, eventDesc, eventDateTime, eventLocation;
+    double eventLat, eventLong;
 
+    public double getEventLat() {
+        return eventLat;
+    }
+
+    public void setEventLat(double eventLat) {
+        this.eventLat = eventLat;
+    }
+
+    public double getEventLong() {
+        return eventLong;
+    }
+
+    public void setEventLong(double eventLong) {
+        this.eventLong = eventLong;
+    }
 
     public String getEventTitle() {
         return eventTitle;
