@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.kunzisoft.switchdatetime.SwitchDateTimeDialogFragment;
 
@@ -28,6 +29,8 @@ public class CreateEvent extends AppCompatActivity {
     private static final String TAG_DATETIME_FRAGMENT = "TAG_DATETIME_FRAGMENT";
     private static final String STATE_TEXTVIEW = "STATE_TEXTVIEW";
     private SwitchDateTimeDialogFragment dateTimeFragment;
+    private String eventTitle, eventDesc, eventDateTime, eventLocation;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,51 +52,14 @@ public class CreateEvent extends AppCompatActivity {
         mEventDateTimeTv = (TextView) findViewById(R.id.event_date_time_et);
         mEventLocationEt = (EditText) findViewById(R.id.event_location_et);
         mCreateEventBtn = (Button) findViewById(R.id.add_event_btn);
-        mProgressDialog = new ProgressDialog(CreateEvent.this);
-        asyncTask = new AsyncTask<String, Void, String>() {
-            @Override
-            protected void onPreExecute() {
-                mProgressDialog.setMessage("Loading please wait.....");
-                mProgressDialog.show();
-
-                super.onPreExecute();
-            }
-
-            @Override
-            protected String doInBackground(String[] params) {
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
-                eventDataSource.open();
-
-                return null;
-            }
-
-            @Override
-            protected void onPostExecute(String password) {
-                super.onPostExecute(password);
-                mProgressDialog.dismiss();
-
-                eventDataSource.closeDatabase();
-
-
-            }
-
-        }
-
-        ;
-
 
         mCreateEventBtn.setOnClickListener(new View.OnClickListener()
 
                                            {
                                                @Override
                                                public void onClick(View v) {
-                                                   if (validateFields() == true) {
-
+                                                   if (validateFields()) {
+                                                       new CreateEventTask(eventTitle, eventDesc, eventDateTime, eventLocation).execute();
 
                                                    }
                                                }
@@ -173,11 +139,10 @@ public class CreateEvent extends AppCompatActivity {
 
 
     public boolean validateFields() {
-
-        String eventTitle = mEventTitleEt.getText().toString();
-        String eventDesc = mEventDescriptionEt.getText().toString();
-        String eventDateTime = mEventDateTimeTv.getText().toString();
-        String eventLocation = mEventLocationEt.getText().toString();
+        eventTitle = mEventTitleEt.getText().toString();
+        eventDesc = mEventDescriptionEt.getText().toString();
+        eventDateTime = mEventDateTimeTv.getText().toString();
+        eventLocation = mEventLocationEt.getText().toString();
 
         if (eventTitle.equals("")) {
             mEventTitleEt.setError("Please enter event title");
@@ -203,7 +168,43 @@ public class CreateEvent extends AppCompatActivity {
         super.onSaveInstanceState(savedInstanceState);
     }
 
+    private class CreateEventTask extends AsyncTask<Void, Void, Boolean> {
+        private String eventTitle, eventDesc, eventDateTime, eventLocation;
+        private ProgressDialog progressDialog;
 
+        public CreateEventTask(String eventTitle, String eventDesc, String eventDateTime, String eventLocation) {
+            this.eventTitle = eventTitle;
+            this.eventDesc = eventDesc;
+            this.eventDateTime = eventDateTime;
+            this.eventLocation = eventLocation;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            progressDialog = ProgressDialog.show(CreateEvent.this, "Create Event", "Creating Event...", true, false);
+        }
+
+        @Override
+        protected Boolean doInBackground(Void... inputs) {
+            eventDataSource.open();
+            long id = eventDataSource.insertNewEvent(eventTitle, eventDesc, eventDateTime, eventLocation);
+            eventDataSource.closeDatabase();
+            return id != -1;
+        }
+
+        @Override
+        protected void onPostExecute(Boolean result) {
+            if (null != progressDialog && progressDialog.isShowing()) {
+                progressDialog.dismiss();
+            }
+            if (result) {
+                Toast.makeText(CreateEvent.this, "Inserted successfully", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(CreateEvent.this, "Unable to insert", Toast.LENGTH_SHORT).show();
+
+            }
+        }
+    }
 }
 
 
