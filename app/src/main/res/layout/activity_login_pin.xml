@@ -23,7 +23,7 @@
         android:layout_height="@dimen/edit_text_height"
         android:gravity="center"
         android:hint="@string/enterpin"
-        android:inputType="number"
+        android:inputType="numberPassword"
         android:maxLength="4"
         android:padding="@dimen/edit_text_padding" />
 

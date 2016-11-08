@@ -47,10 +47,10 @@
 
         <TextView
             android:id="@+id/event_date_time_et"
-            style="@style/EditText"
             android:layout_width="match_parent"
             android:layout_height="@dimen/edit_text_height"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:background="@drawable/et_normal"
             android:hint="@string/enter_datetime"
             android:padding="@dimen/edit_text_padding" />
 
@@ -65,7 +65,6 @@
                 style="@style/TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checked="true"
                 android:text="@string/entercurrentlocation" />
 
             <RadioButton
