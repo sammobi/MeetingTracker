@@ -5,6 +5,7 @@
     <string name="intro_text">Please enter your pin to secure your account!</string>
     <string name="skip">Skip for Now</string>
 
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="confirm_pin">Please confirm your pin!</string>
