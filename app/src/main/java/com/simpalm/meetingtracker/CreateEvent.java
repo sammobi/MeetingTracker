@@ -37,9 +37,8 @@ import java.util.Locale;
 public class CreateEvent extends BaseLocation implements PlaceSelectionListener {
 
     private Toolbar mToolbar;
-    private EditText mEventTitleEt, mEventDescriptionEt;
+    private EditText mEventTitleEt, mEventDescriptionEt, mEventLocationEt;
     private Button mCreateEventBtn;
-    private AutoCompleteTextView mEventLocationEt;
     private TextView mEventDateTimeTv;
     EventDataSource eventDataSource;
     private static final String TAG_DATETIME_FRAGMENT = "TAG_DATETIME_FRAGMENT";
@@ -216,7 +215,9 @@ public class CreateEvent extends BaseLocation implements PlaceSelectionListener 
 
     @Override
     public void onPlaceSelected(Place place) {
-
+        mLocation = new Location("Meeting Tracker");
+        mLocation.setLatitude(place.getLatLng().latitude);
+        mLocation.setLongitude(place.getLatLng().longitude);
     }
 
     @Override
